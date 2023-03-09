@@ -10,9 +10,10 @@ const Box = (props) => {
     ref.current.rotation.x += 0.01;
   });
   const handlePointerDown = (e) => {
-    console.log(e);
     e.object.active = true;
     if (window.activeMesh) {
+      scaleDown(window.activeMesh);
+      window.activeMesh.active = false;
     }
     window.activeMesh = e.object;
   };

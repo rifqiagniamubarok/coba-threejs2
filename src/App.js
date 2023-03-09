@@ -21,8 +21,28 @@ import Orbit from './components/Orbit';
 extend({ OrbitControls });
 
 function App() {
+  const handleClick = (e) => {
+    if (!window.activeMesh) return;
+    window.activeMesh.material.color = new THREE.Color(
+      e.target.style.background
+    );
+  };
   return (
     <div style={{ height: '100vh', width: '100vw' }}>
+      <div style={{ position: 'absolute', zIndex: 1 }}>
+        <div
+          style={{ background: 'blue', height: 50, width: 50 }}
+          onClick={handleClick}
+        ></div>
+        <div
+          style={{ background: 'yellow', height: 50, width: 50 }}
+          onClick={handleClick}
+        ></div>
+        <div
+          style={{ background: 'red', height: 50, width: 50 }}
+          onClick={handleClick}
+        ></div>
+      </div>
       <Canvas
         shadows
         style={{ backgroundColor: '#200553' }}
