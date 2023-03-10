@@ -1,0 +1,11 @@
+Model Information:
+* title:	tesla
+* source:	https://sketchfab.com/3d-models/tesla-9b7e96401de94b88a78191454e6444f3
+* author:	Henry Chi (https://sketchfab.com/henrychi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "tesla" (https://sketchfab.com/3d-models/tesla-9b7e96401de94b88a78191454e6444f3) by Henry Chi (https://sketchfab.com/henrychi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

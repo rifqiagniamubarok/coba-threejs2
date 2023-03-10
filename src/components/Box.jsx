@@ -1,14 +1,17 @@
+import { useBox } from '@react-three/cannon';
 import { useRef } from 'react';
 import { useFrame, useLoader } from 'react-three-fiber';
 import * as THREE from 'three';
 
 const Box = (props) => {
-  const ref = useRef(null);
+  const [ref, api] = useBox(() => ({ mass: 1, ...props }));
+  // const ref = useRef(null);
+  // console.log(ref);
   const texture = useLoader(THREE.TextureLoader, '/wood.jpg');
-  useFrame((state) => {
-    ref.current.rotation.y -= 0.01;
-    ref.current.rotation.x += 0.01;
-  });
+  // useFrame((state) => {
+  //   ref.current.rotation.y -= 0.01;
+  //   ref.current.rotation.x += 0.01;
+  // });
   const handlePointerDown = (e) => {
     e.object.active = true;
     if (window.activeMesh) {
@@ -39,6 +42,7 @@ const Box = (props) => {
   return (
     <mesh
       ref={ref}
+      api={api}
       {...props}
       castShadow
       receiveShadow
